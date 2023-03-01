@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <FONT face="arial">
+    {% load static %}
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BonzaÏ</title>
+	{% block stylesheet %}
+    <link rel="icon" type="image/png" href="/static/img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css" /> </head>
+	<link rel="stylesheet" type="text/css" href="/static/js/scipt.js" /> </head>
+    {% endblock stylesheet %}
+
+<body>
+	<header>
+        {% block nav %}
+		<ul>
+			<li><a href="index_log.html">Accueil</a></li>
+			<li><a href="outil_log.html">Outil</a></li>
+			<li><a href="#c">A propos</a></li>
+			<li><a href="#d">Contact</a></li>
+		</ul>
+        {% endblock nav %}
+        <div class="profile">
+            <a href="Profile.html">My Profile</a>
+        </div>
+	</header>
+<body>
+    <div class="outil" id="outil">
+        <div class="file-input">
+            <input type="file" id="file" class="file">
+            <label for="file">BonsAÏ</label>
+    </div>
+    {% block javascript %}
+	<script src="/static/js/script.js"></script>
+    {% endblock javascript %}
+</body>
+</html>

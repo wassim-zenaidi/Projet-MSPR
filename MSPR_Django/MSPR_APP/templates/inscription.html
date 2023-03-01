@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+    <FONT face="arial">
+    {% load static %}
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+    {% block stylesheet %}
+    <link rel="icon" type="image/png" href="/static/img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css" /> </head>
+	<link rel="stylesheet" type="text/css" href="/static/js/scipt.js" /> </head>    
+    {% endblock stylesheet %}
+ </head>
+
+ <body>
+    <div id="container">
+    <!-- zone de connexion -->
+    
+        <form  method="POST">
+            {% csrf_token %}
+            <h1>Inscription</h1>
+            
+            <label><b>Nom d'utilisateur</b></label>
+            <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+
+            <label><b>Adresse mail</b></label>
+            <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+
+            <label><b>Mot de passe</b></label>
+            <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+
+            <input type="submit" id='submit' value='Valider' href="index_log" >
+ 
+        </form>
+    </div>
+    <style>
+        body{
+            background-color: rgb(7, 113, 109);;
+        }
+    </style>
+    {% block javascript %}
+	<script src="/static/js/script.js"></script>
+    {% endblock javascript %}
+    </FONT>
+ </body>
+</html>
+

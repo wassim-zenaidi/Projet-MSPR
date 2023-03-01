@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <FONT face="arial">
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% block stylesheet %}
+    <link rel="icon" type="image/png" href="/static/img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css" /> </head>
+	<link rel="stylesheet" type="text/css" href="/static/js/scipt.js" /> </head>
+    {% endblock stylesheet %}
+</head>
+<body>
+        <div class="menu">
+
+            <h1>My Profil</h1>
+
+            <button class="message">
+                <a href="messagerie.html">Messagerie</a>
+            </button>
+
+            <button class="activite">
+                <a href="index_log.html">Mes plantes</a>
+            </button>
+
+            <button class="deco">
+                <a href="Accueil">Deconnexion</a>
+            </button>
+</div>
+    {% block javascript %}
+	<script src="/static/js/script.js"></script>
+    {% endblock javascript %}
+    </FONT>
+    
+</body>
+</html>
